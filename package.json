@@ -1,48 +1,23 @@
 {
-  "name": "curbside",
+  "name": "curbside-backend-dev",
   "version": "1.0.0",
-  "description": "Curbside Restaurant Market place",
-  "main": "server.js",
-  "scripts": {
-    "start": " node server.js",
-    "server": "nodemon server",
-    "test": "jest --watchAll"
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0"
   },
-  "standard": {
-    "env": [
-      "jest"
-    ]
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/artlemus/backend-curbside.git"
+    "url": "git+https://github.com/EliJ91/curbside-backend-dev.git"
   },
-  "author": "Arturo Lemus Jr",
+  "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com//artlemus/backend-curbside/issues"
+    "url": "https://github.com/EliJ91/curbside-backend-dev/issues"
   },
-  "homepage": "https://github.com//artlemus/backend-curbside#readme",
-  "dependencies": {
-    "bcryptjs": "^2.4.3",
-    "config": "^3.3.2",
-    "core-util-is": "^1.0.2",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "express-jwt": "^6.0.0",
-    "express-validator": "^6.6.1",
-    "is-empty": "^1.2.0",
-    "jsonwebtoken": "^8.5.1",
-    "mongoose": "^5.10.3",
-    "node-mocks-http": "^1.9.0"
-  },
-  "devDependencies": {
-    "concurrently": "^5.3.0",
-    "jest": "^26.4.2",
-    "jest-runner": "^26.4.2",
-    "jest-json-schema": "^2.1.0",
-    "nodemon": "^2.0.4",
-    "standard": "^14.3.4",
-    "supertest": "^4.0.2"
-  }
+  "homepage": "https://github.com/EliJ91/curbside-backend-dev#readme"
 }
