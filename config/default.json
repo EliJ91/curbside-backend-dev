@@ -1,4 +1,4 @@
 {
-  "mongoURI": "mongodb+srv://KenJudd:MernStackDev1!@crubside-data.sk9vc.mongodb.net/Crubside-Data?retryWrites=true&w=majority",
-  "jwtSecret": "al_myJwtSecret"
+  "mongoURI": "mongodb+srv://eli-dev:34dmq5wy3@rest-api-8qb8h.mongodb.net/rest-api?retryWrites=true&w=majority",
+  "jwtSecret": "ej_myJwtSecret"
 }
