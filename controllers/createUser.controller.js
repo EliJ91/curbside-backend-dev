@@ -2,6 +2,7 @@ const UserRegistration = require('../models/user')
 const bcrypt = require('bcrypt')
 
 exports.createUser = async (req, res, next) => {
+  console.log(req)
   const {email, password, owner} = req.body
   try {
     let createdUser = await UserRegistration.findOne({

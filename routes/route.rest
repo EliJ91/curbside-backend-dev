@@ -5,21 +5,20 @@ GET http://localhost:5000/user
 GET http://localhost:5000/user
 
 ###
-POST http://localhost:5000/user/new
-Content-Type: application/json
-
-{
-    "email": "testuser@gmail.com",
-    "password": "pashword",
-    "admin": false
-}
-
-###
 POST http://localhost:5000/api/v1/user/create
 Content-Type: application/json
 
 {
-    "email": "testa@gmail.com",
+    "email": "testuser2@gmail.com",
     "password": "pashword",
-    "owner" : true
+    "owner": false
+}
+
+###
+POST http://localhost:5000/api/v1/user/login
+Content-Type: application/json
+
+{
+    "email": "testa@gmail.com",
+    "password": "pashword"
 }
