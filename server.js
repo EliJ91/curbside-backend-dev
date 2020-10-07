@@ -7,6 +7,7 @@ var cors = require('cors')
 
 mongoose.connect(process.env.MONGO_URI,{ useUnifiedTopology: true, useNewUrlParser: true })
 const db = mongoose.connection
+mongoose.set('useCreateIndex', true)
 db.on('error', (error)=> console.error(error))
 db.once('open', ()=>console.log("Connected to DB."))
 
