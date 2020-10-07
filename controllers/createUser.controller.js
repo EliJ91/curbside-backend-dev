@@ -2,7 +2,7 @@ const UserRegistration = require('../models/user')
 const bcrypt = require('bcrypt')
 
 exports.createUser = async (req, res, next) => {
-  const {email, password, admin} = req.body
+  const {email, password, owner} = req.body
   try {
     let createdUser = await UserRegistration.findOne({
       email
@@ -19,7 +19,7 @@ exports.createUser = async (req, res, next) => {
       createdUser = new UserRegistration({
         email,
         password,
-        admin
+        owner
       })
       const salt = await bcrypt.genSalt(10)
 
@@ -30,5 +30,6 @@ exports.createUser = async (req, res, next) => {
     }
   } catch (err) {
     next(err)
+    
   }
 }

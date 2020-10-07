@@ -5,8 +5,7 @@ const loginUserController = require('../controllers/loginUser.controller')
 
 //CREATE NEW USER
 router.post('/user/create', newUserController.createUser)
-router.post('/user/login', loginUserController.loginUser)
-
+router.post('/user/login', loginUserController.loginUser) 
 
 module.exports = router
 

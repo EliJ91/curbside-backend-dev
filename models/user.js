@@ -10,28 +10,10 @@ const NewUserSchema = new mongoose.Schema({
         type: String,
         required: true
       },
-      admin: {
+      owner: {
         type: Boolean,
         required: true
-      },
-      restaurant: [
-        {
-          restaurantname: String,
-          menuitems:
-          [
-            {
-              name: String,
-              description: String,
-              allergies: String,
-              price: Number,
-              image: String,
-              calories: Number,
-              category: String
-            }
-          ]
-        }
-      ]
-    
+      }    
     })
     const userModel = mongoose.model('NewUsers', NewUserSchema)
     module.exports = userModel
