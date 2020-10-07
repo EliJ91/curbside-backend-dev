@@ -4,8 +4,8 @@ const newUserController = require('../controllers/createUser.controller')
 const loginUserController = require('../controllers/loginUser.controller')
 
 //CREATE NEW USER
-router.post('/new', newUserController.createUser)
-router.post('/login', loginUserController.loginUser)
+router.post('/user/create', newUserController.createUser)
+router.post('/user/login', loginUserController.loginUser)
 
 
 module.exports = router
