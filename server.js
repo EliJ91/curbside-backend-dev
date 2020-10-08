@@ -17,7 +17,9 @@ app.use(cors())
 const UserRouter = require('./routes/users.routes')
 app.use('/api/v1', UserRouter)
 
-app.listen(5000, ()=> console.log('Server Started.'))
+const PORT = process.env.PORT || 80
+
+app.listen(PORT, ()=> console.log(`Server Started on port ${PORT}`))
 
 app.get('/', (req, res) => {
     res.send('API Status: Running')
