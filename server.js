@@ -5,6 +5,7 @@ const app = express();
 const mongoose = require('mongoose');
 var cors = require('cors')
 
+
 mongoose.connect(process.env.MONGO_URI,{ useUnifiedTopology: true, useNewUrlParser: true })
 const db = mongoose.connection
 mongoose.set('useCreateIndex', true)
@@ -15,7 +16,10 @@ app.use(express.json())
 app.use(cors())
 
 const UserRouter = require('./routes/users.routes')
-app.use('/api/v1', UserRouter)
+app.use('/api/user', UserRouter)
+
+const RestaurantRouter = require('./routes/restaurants.routes')
+app.use('/api/restaurant', RestaurantRouter)
 
 const PORT = process.env.PORT || 80
 

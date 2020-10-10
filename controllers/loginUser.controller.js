@@ -28,10 +28,10 @@ exports.loginUser = async (req, res) => {
           return res.status(422).json({ msg: 'Invalid credentials' })
         }
         loginUser.password = undefined
-        jwt.sign(loginUser.email, process.env.JWT_SECRET, (err, token) => {
-          if (err) throw err
-          res.status(201).json({token,loginUser})
-        })
+        const accessToken = jwt.sign(loginUser.email, process.env.JWT_SECRET)
+        
+        res.status(201).json({accessToken: accessToken,loginUser})
+        
       })
     }
   } catch (err) {
